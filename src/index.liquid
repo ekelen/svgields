@@ -2,17 +2,11 @@
 layout: layout.liquid
 ---
 
-<div style="height: auto; width: 90vw">
-  <svg
-    viewBox="0 0 1000 200"
-    height="auto"
-    width="100%"
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-  >
+<div id="hero">
+  <svg viewBox="0 0 1000 200" height="auto" width="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <defs>
       <style type="text/css">
-        .heavy {
+        text {
           font: bold 100px chomskyregular;
         }
 
@@ -22,15 +16,16 @@ layout: layout.liquid
       </style>
     </defs>
 
-    <text x="20" y="100" class="heavy fade1">Svgields of</text>
-    <text x="1000" y="135" text-anchor="end" class="heavy">svgldmasters</text>
+    <text x="20" y="100" class="fade1">Svgields of</text>
+    <text x="1000" y="135" text-anchor="end">svgldmasters</text>
   </svg>
 </div>
 
 <nav>
   {% for page in meta.pages %}
-  <a href="{{ page | replace: ' ', '' | prepend: '/' }}">{{ page }}</a>
-  {% if forloop.last == false %}
-  <img src="/img/shield.svg" height="15" width="20" />
-  {% endif %} {% endfor %}
+    <a href="{{ page | replace: ' ', '' | prepend: '/' | url }}">{{ page }}</a>
+    {% if forloop.last == false %}
+      <img src={{ "/img/shield.svg" | url }} class="divider" />
+    {% endif %}
+  {% endfor %}
 </nav>

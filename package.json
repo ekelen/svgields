@@ -1,0 +1,19 @@
+{
+  "name": "svgplayground",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekelen/svgields.git"
+  },
+  "keywords": [],
+  "author": "ekelen",
+  "homepage": "https://github.com/ekelen/svgields#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

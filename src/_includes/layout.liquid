@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ meta.title }} · ekelen</title>
-    <link rel="icon" href="/img/sword_shield_filled_freepik.svg" />
-    <link rel="stylesheet" href="/font/font.css" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/divs.css" />
+    <title>· {{ meta.title }} ·</title>
+    <link
+      rel="icon"
+      href="{{ '/img/sword_shield_filled_freepik.svg' | url }}"
+    />
+    <link rel="stylesheet" href="{{ '/font/font.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/global.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/divs.css' | url }}" />
   </head>
   <body>
     <header><p>just an svg playground</p></header>

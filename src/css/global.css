@@ -31,6 +31,17 @@ header p {
   font-family: "Courier New", Courier, monospace;
 }
 
+#hero {
+  height: auto;
+  width: 90vw;
+  z-index: 2;
+  position: relative;
+}
+
+.heavy.test {
+  color: red;
+}
+
 aside {
   position: absolute;
   bottom: 10px;
@@ -77,6 +88,11 @@ nav a {
   transition-property: transform;
   transition-timing-function: ease-out;
   transition-duration: 0.2s;
+}
+
+nav .divider {
+  height: 15px;
+  width: 20px;
 }
 
 a:hover,

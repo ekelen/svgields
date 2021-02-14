@@ -3,9 +3,8 @@ module.exports = (config) => {
   config.addPassthroughCopy("src/css");
   config.addPassthroughCopy("src/img");
 
-  // config.addPassthroughCopy('src/js');
-
   return {
+    pathPrefix: process.env.NODE_ENV === "production" ? "/svgields/" : "/",
     dir: {
       input: "src",
     },

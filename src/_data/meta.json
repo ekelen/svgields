@@ -1,6 +1,6 @@
 {
   "title": "Svgields of svgldmasters",
-  "pages": ["inline svg", "img tags"],
+  "pages": ["inline svg", "img tags", "css filters"],
   "src": [
     {
       "svg": {

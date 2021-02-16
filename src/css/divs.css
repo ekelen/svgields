@@ -6,6 +6,7 @@
   overflow-y: hidden;
   position: relative;
 }
+
 .inner {
   border: 1px solid hsla(0, 0%, 80%, 100%);
   background-color: hsla(0, 0%, 95%, 100%);

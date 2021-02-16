@@ -1,20 +1,22 @@
 :root {
-  --var-background-offset: #fff;
-  --var-background: #ccc;
-  --var-color: #333;
+  --var-white: #fff;
+  --var-gray4: #ccc;
+  --var-gray3: #aaa;
+  --var-gray2: #444;
+  --var-gray1: #222;
   --var-link: #19acf2;
 }
 
 body {
-  background: var(--var-background);
-  color: var(--var-color);
+  background: var(--var-gray4);
+  color: var(--var-gray2);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
 }
 
 header {
-  background: var(--var-background-offset);
+  background: var(--var-white);
   width: 100%;
   position: absolute;
   top: 0;
@@ -25,9 +27,13 @@ header {
   z-index: 0;
 }
 
+main {
+  margin-top: 50px;
+}
+
 header p {
   margin-right: 10px;
-  color: #777;
+  color: var(--var-gray1);
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -115,6 +121,12 @@ code {
   padding: 5px;
   background-color: hsla(0, 0%, 100%, 60%);
   border-radius: 5px;
+}
+
+code.wrap {
+  white-space: unset;
+  width: 600px;
+  max-width: calc(100vw - 300px);
 }
 
 h1 {

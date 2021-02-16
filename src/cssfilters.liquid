@@ -1,0 +1,58 @@
+---
+layout: layout.liquid
+images:
+- /img/circle.svg
+- /img/coin_heads.jpg
+- /img/shape_opacities.svg
+- /img/shape_opacities_white.svg
+- /img/shape_opacities_colors.svg
+title: css filters
+---
+
+<nav>
+	<a href="{{ '/' | url }}">
+	  <img src="{{'/img/sword_shield_filled_freepik.svg' | url }}" class="homelink"/>
+	</a>
+	{% for page in meta.pages %}
+	  {% if title == page %}
+		<span>{{ title }}</span>
+	  {% else %}
+		<a href="{{ page | replace: ' ', '' | prepend: '/' | url }}">{{ page }}</a>
+	  {% endif %}
+	  {% if forloop.last == false %}
+		<img src={{ "/img/shield.svg" | url }} class="divider" />
+	  {% endif %}
+	{% endfor %}
+  </nav>
+
+  {% for img_src in images %}
+		<div class="outer">
+			<code class="wrap">&lt;img src="{{img_src}}"&gt;<br /></code>
+			  <div class="inner">
+				  <img
+					src={{ img_src | url }}
+				  />
+				</div>
+			  </div>
+		{% endfor %}
+
+{% for img_css in css_filters %}
+
+{% for img_src in images %}
+	{% if img_src == "/img/circle.svg" %}
+		{% assign my_css = img_css | prepend: 'filter: invert(50%) ' %}
+	{% else %}
+		{% assign my_css = img_css | prepend: 'filter: ' %}
+	{% endif %}
+
+		<div class="outer">
+			<code class="wrap">&lt;img {{ my_css }} src="{{img_src}}"&gt;<br /></code>
+			  <div class="inner">
+				  <img
+					src={{ img_src | url }}
+				  	style="{{ my_css }}"
+				  />
+				</div>
+			  </div>
+		{% endfor %}
+{% endfor %}
